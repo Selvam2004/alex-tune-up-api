@@ -59,7 +59,7 @@ const transporter = nodemailer.createTransport({
  //Function to send mail
  async function sendmail(email,name,mobilenumber,bikenumber,enddate) {
   console.log("emial sending")
-   const adminemail=await Users.find({role:"admin"};
+   const adminemail=await Users.find({role:"admin"});
     const info = await transporter.sendMail({
       from: email, 
       to: admin, 

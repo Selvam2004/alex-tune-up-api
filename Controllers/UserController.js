@@ -59,9 +59,10 @@ const transporter = nodemailer.createTransport({
  //Function to send mail
  async function sendmail(email,name,mobilenumber,bikenumber,enddate) {
   console.log("emial sending")
+   const adminemail=await Users.find({role:"admin"};
     const info = await transporter.sendMail({
       from: email, 
-      to: '717821f116@kce.ac.in', 
+      to: admin, 
       subject: "Hello !!! New Booking Received" , 
       html:`<b>Order Information</b>
       <h1>Name:${name}</h1><h1>Mobile Number:${mobilenumber}</h1>
